@@ -11,16 +11,54 @@
   --buttun: #188ce8;
   --fon-img: #eeeeee;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   background-color: var(--primary-bg-color);
   color: var(--primari-text-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+  width: 1600px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-/* шапка  */
+ul {
+  margin: 0;
+
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/*================ шапка ================ */
+
+.page-nav,
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   color: var(--accent-color);
@@ -30,14 +68,30 @@ body {
   font-size: 26px;
   line-height: 1.2;
 }
+.page-logo {
+  padding-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
 .studio {
   color: var(--studio);
+  margin: 0;
 }
 
 .nav-link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.site-nav {
+  display: flex;
+  padding-right: 344px;
+}
+.main-list:not(:last-child) {
+  padding-right: 50px;
+}
+.main-contact:not(:last-child) {
+  padding-right: 50px;
 }
 .link {
   color: inherit;
@@ -51,10 +105,6 @@ body {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
-}
-
-.list {
-  list-style: none;
 }
 
 .contact.list {
@@ -71,7 +121,80 @@ body {
   color: var(--accent-color);
 }
 
-/* секція 1 */
+.contact {
+  display: flex;
+}
+
+/*==============кнопка============== */
+.button {
+  font-family: 'Roboto';
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid transparent;
+  min-width: 73px;
+  height: 38px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  margin: auto;
+  box-sizing: border-box;
+}
+.button.primary {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  padding: 10px 32px;
+  min-width: 216px;
+  height: 50px;
+  font-weight: 700;
+  line-height: 1.88;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background: var(--buttun);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button.secodary {
+  color: var(--primari-text-color);
+  background-color: var(--background);
+  padding: 6px 22px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+}
+.button-secodary {
+  display: flex;
+}
+.button.btn {
+  padding: 6px 25px;
+}
+.button.secodary:hover,
+.button.secodary:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.btn-secodary:not(:last-child) {
+  padding-right: 8px;
+}
+
+/* ============== секція 1 ============== */
+.section {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.section:not(:last-child) {
+  margin-bottom: 94px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -89,6 +212,10 @@ body {
 .footer {
   background-color: var(--heder-footer);
 }
+.hero {
+  width: 1600px;
+  height: 600px;
+}
 
 .hero-title {
   color: var(--primary-bg-color);
@@ -96,67 +223,74 @@ body {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
+  padding: 200px 252px 30px 252px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* кнопка */
-.button {
-  font-family: 'Roboto';
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 500;
-}
-.button.primary {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  line-height: 1.88;
+/*================ сеуція 2================ */
+.feature-list {
   display: flex;
-  border-radius: 4px;
-  align-items: center;
-  letter-spacing: 0.06em;
 }
-.button.primary:hover,
-.button.primary:focus {
-  background: var(--buttun);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+.title-text:not(:last-child) {
+  padding-right: 30px;
 }
 
-.button.secodary {
-  color: var(--primari-text-color);
-  background-color: var(--background);
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-}
-.button.secodary:hover,
-.button.secodary:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-}
-
-/* сеуція 2 */
 .feature-list .title {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .feature-list .text {
   color: var(--title-text-color);
   line-height: 1.7;
 }
 
-/* секція 3 */
+/*================ секція 3 ================*/
+
+.list-img {
+  max-width: 1200px;
+  height: auto;
+}
+.list-img:not(:last-child) {
+  margin-right: 30px;
+}
+.text-list {
+  display: flex;
+}
+
 .section-title {
   color: var(--primari-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
-/* 4 */
+/*================ 4 ================*/
+.menu-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  text-align: center;
+}
+
+.team-text {
+  max-width: 270px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-text:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team {
   background-color: var(--background);
 }
@@ -164,16 +298,32 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-list p {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.2;
+  margin-bottom: 30px;
 }
-/* ФУТЕР */
+/*================ ФУТЕР ================*/
+.footer {
+  width: 1600px;
+  height: 252px;
+}
+.footer-container {
+  padding: 60px 0;
+}
+
 .footer-list {
   font-style: normal;
+  padding-top: 20px;
 }
+.footer-contact-list:not(:last-child) {
+  padding-bottom: 9px;
+}
+
 .footer-link,
 .footer-studio {
   color: var(--primary-bg-color);
@@ -197,7 +347,11 @@ body {
   color: var(--accent-color);
 }
 
-/* проджект */
+/*================ проджект ================*/
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
 .sidebar a {
   color: var(--primari-text-color);
   text-decoration: none;
