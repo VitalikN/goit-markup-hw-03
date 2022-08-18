@@ -87,7 +87,6 @@ img {
 }
 .site-nav {
   display: flex;
-  padding-right: 344px;
 }
 .main-list:not(:last-child) {
   margin-right: 50px;
@@ -125,6 +124,7 @@ img {
 
 .contact {
   display: flex;
+  margin-left: auto;
 }
 
 /*==============кнопка============== */
@@ -133,8 +133,7 @@ img {
   cursor: pointer;
   display: inline-block;
   border: 1px solid transparent;
-  min-width: 73px;
-  height: 38px;
+
   font-size: 16px;
   text-align: center;
   font-weight: 500;
@@ -165,6 +164,8 @@ img {
 .button.secodary {
   color: var(--primari-text-color);
   background-color: var(--background);
+  min-width: 73px;
+  height: 38px;
   padding: 6px 22px;
   line-height: 1.6;
   letter-spacing: 0.03em;
@@ -172,6 +173,7 @@ img {
 }
 .button-secodary {
   display: flex;
+  justify-content: center;
 }
 .button.btn {
   padding: 6px 25px;
@@ -322,10 +324,10 @@ img {
 
 .footer-list {
   font-style: normal;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 .footer-contact-list:not(:last-child) {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer-link,
@@ -352,6 +354,14 @@ img {
 }
 
 /*================ проджект ================*/
+
+.section.portfolio {
+  margin: 94px 0;
+}
+.button-secodary {
+  padding-bottom: 50px;
+}
+
 .sidebar {
   display: flex;
   flex-wrap: wrap;
