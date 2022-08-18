@@ -22,7 +22,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
-  width: 1600px;
+  width: 100%;
 }
 h1,
 h2,
@@ -39,6 +39,8 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .list {
   list-style: none;
@@ -71,7 +73,7 @@ img {
   line-height: 1.2;
 }
 .page-logo {
-  padding-right: 93px;
+  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
 }
@@ -84,6 +86,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding: 32px 0;
 }
 .site-nav {
   display: flex;
@@ -116,6 +119,7 @@ img {
 .contact-link {
   color: var(--title-text-color);
   text-decoration: none;
+  padding: 32px 0;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -195,8 +199,17 @@ img {
   padding: 0;
   display: block;
 }
-.section:not(:last-child) {
-  margin-bottom: 94px;
+.hero {
+  height: 600px;
+}
+
+.section {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.section + .section {
+  padding-top: 94px;
 }
 
 .visually-hidden {
@@ -215,10 +228,6 @@ img {
 .hero,
 .footer {
   background-color: var(--heder-footer);
-}
-.hero {
-  width: 1600px;
-  height: 600px;
 }
 
 .hero-title {
@@ -281,8 +290,6 @@ img {
 
 .team-list {
   display: flex;
-  text-align: center;
-  max-width: 1200px;
 }
 
 .team-text {
@@ -300,22 +307,27 @@ img {
 .team {
   background-color: var(--background);
 }
+
 .team-list h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 10px;
 }
 .team-list p {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.2;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+}
+.aside {
+  padding: 30px 0px;
+  text-align: center;
 }
 /*================ ФУТЕР ================*/
 .footer {
-  width: 1600px;
+  width: 100%;
   height: 252px;
 }
 .footer-container {
@@ -356,7 +368,7 @@ img {
 /*================ проджект ================*/
 
 .section.portfolio {
-  margin: 94px 0;
+  padding: 94px 0;
 }
 .button-secodary {
   padding-bottom: 50px;
