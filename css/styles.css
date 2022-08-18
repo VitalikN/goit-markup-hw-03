@@ -60,7 +60,7 @@ img {
 
 .page-header {
   height: 80px;
-  border: 1px solid var(--border--headr);
+  border-bottom: 1px solid var(--border--headr);
 }
 .page-nav,
 .main-nav {
