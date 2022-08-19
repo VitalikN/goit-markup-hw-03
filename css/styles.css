@@ -384,6 +384,7 @@ img {
 .sidebar {
   display: flex;
   flex-wrap: wrap;
+  /* gap: 30px; */
 }
 .sidebar a {
   color: var(--primari-text-color);
