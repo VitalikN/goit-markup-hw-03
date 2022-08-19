@@ -29,9 +29,10 @@ h2,
 h3,
 p {
   margin: 0;
-  padding: 0;
 }
-
+address {
+  font-style: normal;
+}
 ul {
   margin: 0;
 
@@ -45,15 +46,18 @@ img {
 .list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+
   max-width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /*================ шапка ================ */
@@ -137,23 +141,24 @@ img {
 
 /*==============кнопка============== */
 .button {
-  font-family: 'Roboto';
+  display: block;
   cursor: pointer;
-  display: inline-block;
+  margin: 0 auto;
+
   border: 1px solid transparent;
 
+  font-family: 'Roboto';
   font-size: 16px;
   text-align: center;
   font-weight: 500;
-  margin: auto;
+
   box-sizing: border-box;
 }
 .button.primary {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
-  padding: 10px;
-  width: 216px;
-  height: 50px;
+  padding: 10px 32px;
+
   font-weight: 700;
   line-height: 1.88;
   display: flex;
@@ -174,8 +179,7 @@ img {
 .button.secodary {
   color: var(--primari-text-color);
   background-color: var(--background);
-  min-width: 73px;
-  height: 38px;
+
   padding: 6px 22px;
   line-height: 1.6;
   letter-spacing: 0.03em;
@@ -186,9 +190,7 @@ img {
   display: flex;
   justify-content: center;
 }
-.button.btn {
-  padding: 6px 25px;
-}
+
 .button.secodary:hover,
 .button.secodary:focus {
   color: var(--primary-bg-color);
@@ -197,26 +199,14 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn-secodary:not(:last-child) {
-  padding-right: 8px;
+  margin-right: 8px;
 }
 
 /* ============== секція 1 ============== */
-.section {
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-.hero {
-  height: 600px;
-}
 
-.section {
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-.section + .section {
-  padding-top: 94px;
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .visually-hidden {
@@ -243,9 +233,12 @@ img {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
-  padding: 200px 252px 30px 252px;
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 /*================ сеуція 2================ */
@@ -290,10 +283,6 @@ img {
   margin-bottom: 50px;
 }
 /*================ 4 ================*/
-.menu-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .team-list {
   display: flex;
@@ -301,7 +290,6 @@ img {
 
 .team-text {
   max-width: 270px;
-  display: block;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -329,15 +317,11 @@ img {
   /* margin-bottom: 30px; */
 }
 .aside {
-  padding: 30px 15px;
+  padding: 30px 0;
   text-align: center;
 }
 /*================ ФУТЕР ================*/
 .footer {
-  width: 100%;
-  height: 252px;
-}
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
