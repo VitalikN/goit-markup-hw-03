@@ -2,6 +2,7 @@
   --primari-text-color: #212121;
   --title-text-color: #757575;
   --accent-color: #2196f3;
+  --team-text--background: #ffffff;
   --primary-bg-color: #ffffff;
   --studio: #000000;
   --background: #f5f4fa;
@@ -262,7 +263,9 @@ img {
 }
 
 /*================ секція 3 ================*/
-
+.section-sidebar {
+  padding-top: 0;
+}
 .list-img {
   max-width: 1200px;
   height: auto;
@@ -290,7 +293,7 @@ img {
 
 .team-text {
   max-width: 270px;
-
+  background: var(--team-text--background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -363,7 +366,7 @@ img {
   padding: 94px 0;
 }
 .button-secodary {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .sidebar {
